@@ -1821,3 +1821,39 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-05 .ответ__вопрос { grid-template-columns: 2.2em 1fr 20px; gap: 10px; }
     #экран-05 .ответ__тело { padding: 0 0 22px calc(2.2em + 10px); }
   }
+
+/* экран 06 */
+#экран-06 .тело { position: relative; z-index: 2; display: grid; gap: 44px; align-items: start; }
+  #экран-06 .способы { list-style: none; margin: 0; padding: 0; }
+  #экран-06 .способ { display: grid; grid-template-columns: 44px 1fr; gap: 18px; align-items: center; padding: 22px 0; border-top: 1px solid; }
+  #экран-06 .способ:last-child { border-bottom: 1px solid; }
+  #экран-06 .способ__знак { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; border: 1px solid; }
+  #экран-06 .способ__знак svg { width: 20px; height: 20px; }
+  #экран-06 .способ__имя { display: block; margin-bottom: 4px; font-size: var(--кегль-кикер); letter-spacing: var(--разрядка-кикера); text-transform: uppercase; }
+  #экран-06 .способ__адрес { font-size: var(--кегль-лид); font-weight: 700; text-decoration: none; }
+  #экран-06 a.способ__адрес:hover { text-decoration: underline; }
+  #экран-06 .способ__адрес--скоро { font-weight: 400; font-style: italic; }
+  #экран-06 .приглашение { padding-top: 22px; border-top: var(--нить) solid; }
+  #экран-06 .приглашение > * { margin: 0; }
+  #экран-06 .приглашение__вопрос { font-size: var(--кегль-цифра); font-weight: 300; line-height: 1.15; margin-bottom: 10px; }
+  #экран-06 .приглашение__текст { font-size: var(--кегль-текст); line-height: 1.6; margin-bottom: 22px; }
+
+  #экран-06.тёмный .способ { border-color: color-mix(in srgb, var(--цвет-тёплый) 35%, transparent); }
+  #экран-06.тёмный .способ__знак { border-color: color-mix(in srgb, var(--цвет-тёплый) 55%, transparent); color: var(--цвет-тёплый); }
+  #экран-06.тёмный .способ__имя { color: var(--цвет-тёплый); }
+  #экран-06.тёмный .способ__адрес { color: var(--цвет-тёмный-текст); }
+  #экран-06.тёмный .способ__адрес--скоро, #экран-06.тёмный .приглашение__текст { color: color-mix(in srgb, var(--цвет-тёмный-текст) 75%, transparent); }
+  #экран-06.тёмный .приглашение { border-color: var(--цвет-тёплый); }
+  #экран-06.тёмный .приглашение__вопрос { color: var(--цвет-тёплый); }
+
+  #экран-06.светлый .способ { border-color: var(--цвет-линия); }
+  #экран-06.светлый .способ__знак { border-color: var(--цвет-линия); color: var(--цвет-акцент); }
+  #экран-06.светлый .способ__имя { color: var(--цвет-акцент); }
+  #экран-06.светлый .способ__адрес { color: var(--цвет-текст); }
+  #экран-06.светлый .способ__адрес--скоро, #экран-06.светлый .приглашение__текст { color: var(--цвет-текст-мягкий); }
+  #экран-06.светлый .приглашение { border-color: var(--цвет-акцент); }
+  #экран-06.светлый .приглашение__вопрос { color: var(--цвет-акцент-глубже); }
+
+  @media (min-width: 900px) {
+    #экран-06 .тело { grid-template-columns: 1.4fr 1fr; gap: 72px; }
+  }
