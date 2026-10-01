@@ -1740,3 +1740,40 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   @media (max-width: 899px) {
     #экран-03 .полоса-кадра .заглушка-картинки { aspect-ratio: 4 / 3; }
   }
+
+/* экран 04 */
+#экран-04 .разворот { position: relative; z-index: 2; display: grid; gap: 40px; align-items: center; }
+  #экран-04 .рассказ .секция__шапка { margin-bottom: 28px; }
+  #экран-04 .рассказ h2 { margin-bottom: 14px; }
+  #экран-04 .кто { margin: 0; font-size: var(--кегль-лид); font-weight: 700; }
+  #экран-04 .кто span { font-weight: 400; }
+  #экран-04 .абзац { margin: 0 0 16px; font-size: var(--кегль-текст); line-height: 1.65; max-width: var(--ширина-колонки); }
+  #экран-04 .факты { list-style: none; margin: 32px 0 0; padding: 0; display: grid; gap: 0 28px; }
+  #экран-04 .факт { padding: 18px 0; border-top: 1px solid; }
+  #экран-04 .факт > * { margin: 0; }
+  #экран-04 .факт__число { margin-bottom: 8px; font-size: var(--кегль-h2); font-weight: 300; line-height: 1; letter-spacing: -0.02em; }
+  #экран-04 .факт__подпись { font-size: var(--кегль-кикер); letter-spacing: var(--разрядка-кикера); text-transform: uppercase; line-height: 1.4; }
+  #экран-04 .портрет { position: relative; margin: 0; }
+  #экран-04 .портрет .заглушка-картинки { aspect-ratio: 4 / 5; border-radius: var(--радиус-карточки); }
+  #экран-04 .портрет__плашка { position: absolute; left: 20px; bottom: 20px; margin: 0; padding: 10px 16px;
+      border-radius: var(--радиус-малый); font-size: var(--кегль-мелкий); box-shadow: var(--тень-чип); }
+
+  #экран-04.светлый .кто { color: var(--цвет-текст); }
+  #экран-04.светлый .кто span, #экран-04.светлый .абзац { color: var(--цвет-текст-мягкий); }
+  #экран-04.светлый .факт { border-color: var(--цвет-линия); }
+  #экран-04.светлый .факт__число { color: var(--цвет-акцент); }
+  #экран-04.светлый .факт__подпись { color: var(--цвет-текст-мягкий); }
+  #экран-04.светлый .портрет__плашка { background: var(--цвет-тёмный-фон); color: var(--цвет-тёмный-текст); }
+
+  #экран-04.тёмный .кто { color: var(--цвет-тёмный-текст); }
+  #экран-04.тёмный .кто span, #экран-04.тёмный .абзац { color: color-mix(in srgb, var(--цвет-тёмный-текст) 80%, transparent); }
+  #экран-04.тёмный .факт { border-color: color-mix(in srgb, var(--цвет-тёплый) 40%, transparent); }
+  #экран-04.тёмный .факт__число { color: var(--цвет-тёплый); }
+  #экран-04.тёмный .факт__подпись { color: color-mix(in srgb, var(--цвет-тёмный-текст) 75%, transparent); }
+  #экран-04.тёмный .портрет__плашка { background: var(--цвет-фон); color: var(--цвет-текст); }
+
+  @media (min-width: 900px) {
+    #экран-04 .разворот { grid-template-columns: 1.15fr .85fr; gap: 72px; }
+    #экран-04 .факты { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    #экран-04 .факт__число { font-size: var(--кегль-цифра); }
+  }
