@@ -1709,3 +1709,34 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-02 .меню__строка--главная { padding-left: 18px; }
     #экран-02 .меню__строка--главная::before { left: 0; }
   }
+
+/* экран 03 */
+#экран-03 .шаги-в-ряд { position: relative; z-index: 2; list-style: none; margin: 0; padding: 0; display: grid; gap: 34px; }
+  #экран-03 .шаги-в-ряд li { padding-top: 22px; border-top: 1px solid; }
+  #экран-03 .шаги-в-ряд li > * { margin: 0; }
+  #экран-03 .цифра-шага { display: block; font-size: var(--кегль-h2); font-weight: 300; line-height: 1; margin-bottom: 18px; }
+  #экран-03 .срок-шага { font-size: var(--кегль-кикер); letter-spacing: var(--разрядка-кикера); text-transform: uppercase; margin-bottom: 8px; }
+  #экран-03 .имя-шага { font-size: var(--кегль-лид); font-weight: 700; line-height: 1.3; margin-bottom: 8px; }
+  #экран-03 .текст-шага { font-size: var(--кегль-текст); line-height: 1.55; }
+  #экран-03 .полоса-кадра { position: relative; z-index: 2; margin: 0 0 44px; }
+  #экран-03 .полоса-кадра .заглушка-картинки { aspect-ratio: 21 / 8; border-radius: var(--радиус-карточки); }
+  #экран-03 .итог { position: relative; z-index: 2; margin: 44px auto 0; max-width: 720px; text-align: center;
+      font-size: var(--кегль-лид); line-height: 1.55; font-style: italic; }
+
+  #экран-03.тёмный .шаги-в-ряд li { border-color: color-mix(in srgb, var(--цвет-тёплый) 40%, transparent); }
+  #экран-03.тёмный .цифра-шага, #экран-03.тёмный .срок-шага { color: var(--цвет-тёплый); }
+  #экран-03.тёмный .имя-шага { color: var(--цвет-тёмный-текст); }
+  #экран-03.тёмный .текст-шага { color: color-mix(in srgb, var(--цвет-тёмный-текст) 78%, transparent); }
+  #экран-03.тёмный .итог { color: color-mix(in srgb, var(--цвет-тёмный-текст) 88%, transparent); }
+
+  #экран-03.светлый .шаги-в-ряд li { border-color: var(--цвет-линия); }
+  #экран-03.светлый .цифра-шага, #экран-03.светлый .срок-шага { color: var(--цвет-акцент); }
+  #экран-03.светлый .имя-шага { color: var(--цвет-текст); }
+  #экран-03.светлый .текст-шага, #экран-03.светлый .итог { color: var(--цвет-текст-мягкий); }
+
+  @media (min-width: 900px) {
+    #экран-03 .шаги-в-ряд { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
+  }
+  @media (max-width: 899px) {
+    #экран-03 .полоса-кадра .заглушка-картинки { aspect-ratio: 4 / 3; }
+  }
