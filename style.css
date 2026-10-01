@@ -1777,3 +1777,47 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-04 .факты { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     #экран-04 .факт__число { font-size: var(--кегль-цифра); }
   }
+
+/* экран 05 */
+#экран-05 .тело { position: relative; z-index: 2; display: grid; gap: 44px; align-items: start; }
+  #экран-05 .ответы { margin: 0; padding: 0; }
+  #экран-05 .ответ { border-top: 1px solid; }
+  #экран-05 .ответ:last-child { border-bottom: 1px solid; }
+  #экран-05 .ответ__вопрос { display: grid; grid-template-columns: 2.6em 1fr 24px; gap: 14px; align-items: baseline;
+      padding: 22px 0; cursor: pointer; list-style: none; }
+  #экран-05 .ответ__вопрос::-webkit-details-marker { display: none; }
+  #экран-05 .ответ__номер { font-size: var(--кегль-лид); font-weight: 300; }
+  #экран-05 .ответ__текст-вопроса { font-size: var(--кегль-лид); font-weight: 700; line-height: 1.35; }
+  #экран-05 .ответ__знак { position: relative; width: 16px; height: 16px; align-self: center; }
+  #экран-05 .ответ__знак::before, #экран-05 .ответ__знак::after { content: ""; position: absolute; left: 0; top: 7px; width: 16px; height: var(--нить); }
+  #экран-05 .ответ__знак::after { transform: rotate(90deg); transition: transform var(--длительность) var(--плавность); }
+  #экран-05 .ответ[open] .ответ__знак::after { transform: rotate(0deg); }
+  #экран-05 .ответ__тело { margin: 0; padding: 0 38px 24px calc(2.6em + 14px); font-size: var(--кегль-текст); line-height: 1.65; }
+  #экран-05 .приглашение { padding-top: 22px; border-top: var(--нить) solid; }
+  #экран-05 .приглашение > * { margin: 0; }
+  #экран-05 .приглашение__вопрос { font-size: var(--кегль-цифра); font-weight: 300; line-height: 1.15; margin-bottom: 10px; }
+  #экран-05 .приглашение__текст { font-size: var(--кегль-текст); line-height: 1.6; margin-bottom: 22px; }
+
+  #экран-05.тёмный .ответ { border-color: color-mix(in srgb, var(--цвет-тёплый) 35%, transparent); }
+  #экран-05.тёмный .ответ__номер { color: var(--цвет-тёплый); }
+  #экран-05.тёмный .ответ__текст-вопроса { color: var(--цвет-тёмный-текст); }
+  #экран-05.тёмный .ответ__знак::before, #экран-05.тёмный .ответ__знак::after { background: var(--цвет-тёплый); }
+  #экран-05.тёмный .ответ__тело, #экран-05.тёмный .приглашение__текст { color: color-mix(in srgb, var(--цвет-тёмный-текст) 80%, transparent); }
+  #экран-05.тёмный .приглашение { border-color: var(--цвет-тёплый); }
+  #экран-05.тёмный .приглашение__вопрос { color: var(--цвет-тёплый); }
+
+  #экран-05.светлый .ответ { border-color: var(--цвет-линия); }
+  #экран-05.светлый .ответ__номер { color: var(--цвет-акцент); }
+  #экран-05.светлый .ответ__текст-вопроса { color: var(--цвет-текст); }
+  #экран-05.светлый .ответ__знак::before, #экран-05.светлый .ответ__знак::after { background: var(--цвет-акцент); }
+  #экран-05.светлый .ответ__тело, #экран-05.светлый .приглашение__текст { color: var(--цвет-текст-мягкий); }
+  #экран-05.светлый .приглашение { border-color: var(--цвет-акцент); }
+  #экран-05.светлый .приглашение__вопрос { color: var(--цвет-акцент-глубже); }
+
+  @media (min-width: 900px) {
+    #экран-05 .тело { grid-template-columns: 1.7fr 1fr; gap: 72px; }
+  }
+  @media (max-width: 899px) {
+    #экран-05 .ответ__вопрос { grid-template-columns: 2.2em 1fr 20px; gap: 10px; }
+    #экран-05 .ответ__тело { padding: 0 0 22px calc(2.2em + 10px); }
+  }
