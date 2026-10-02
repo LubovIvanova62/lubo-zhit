@@ -94,6 +94,12 @@
 </head>
 <body class="с-липкой-кнопкой">
 <section class="блок блок--первый-экран первый-экран--сцена тёмный фон--зерно" id="экран-1" data-тип="первый-экран" data-схема="сцена" data-ключ-макета="тёмная" data-картинка="фото" style="--добор-затемнения: 0; --добор-высветления: 0">
+  <style>
+    /* приёмка 02.10: на телефоне низ фото (62 % секции) обрывался ступенькой — фон секции идёт диагональю к светлому, а дымка кадра одного тёмного тона. Низ кадра растворяем в фон секции. */
+    @media (max-width: 899px) {
+      #экран-1 .картинка--сцена { -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%); mask-image: linear-gradient(to bottom, #000 55%, transparent 100%); }
+    }
+  </style>
   <header class="шапка">
     <a class="шапка__лого" href="#">Любовь Иванова · аромапрактик</a>
     <span class="шапка__лиц"><svg class="иконка" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
