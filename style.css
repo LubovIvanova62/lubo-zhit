@@ -1859,3 +1859,30 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   @media (max-width: 899px) {
     #экран-06 .способ + .способ { border-top: 1px solid; }
   }
+
+/* экран 07 */
+#экран-07 .сетка { position: relative; z-index: 2; display: grid; gap: 36px; }
+  #экран-07 .сетка h4 { margin: 0 0 14px; font-size: var(--кегль-кикер); letter-spacing: var(--разрядка-кикера); text-transform: uppercase; font-weight: 600; }
+  #экран-07 .знак { display: block; font-size: var(--кегль-лид); font-weight: 300; line-height: 1.25; text-decoration: none; margin-bottom: 10px; }
+  #экран-07 .знак + p { margin: 0; font-size: var(--кегль-мелкий); }
+  #экран-07 .ссылки { display: grid; gap: 10px; justify-items: start; }
+  #экран-07 .ссылки a { font-size: var(--кегль-текст); text-decoration: none; border-bottom: 1px solid transparent; }
+  #экран-07 .ссылки a:hover { border-bottom-color: currentColor; }
+  #экран-07 .низ { position: relative; z-index: 2; margin-top: 44px; padding-top: 20px; border-top: 1px solid; display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: var(--кегль-мелкий); }
+  #экран-07 .низ span { margin: 0; }
+
+  #экран-07.тёмный .знак { color: var(--цвет-тёплый); }
+  #экран-07.тёмный .знак + p { color: color-mix(in srgb, var(--цвет-тёмный-текст) 72%, transparent); }
+  #экран-07.тёмный .сетка h4 { color: var(--цвет-тёплый); }
+  #экран-07.тёмный .ссылки a { color: var(--цвет-тёмный-текст); }
+  #экран-07.тёмный .низ { border-color: color-mix(in srgb, var(--цвет-тёплый) 35%, transparent); color: color-mix(in srgb, var(--цвет-тёмный-текст) 72%, transparent); }
+
+  #экран-07.светлый .знак { color: var(--цвет-акцент-глубже); }
+  #экран-07.светлый .знак + p { color: var(--цвет-текст-мягкий); }
+  #экран-07.светлый .сетка h4 { color: color-mix(in srgb, var(--цвет-акцент-глубже) 78%, var(--цвет-текст)); }
+  #экран-07.светлый .ссылки a { color: var(--цвет-текст); }
+  #экран-07.светлый .низ { border-color: var(--цвет-линия); color: var(--цвет-текст-мягкий); }
+
+  @media (min-width: 900px) {
+    #экран-07 .сетка { grid-template-columns: 1.3fr 1fr 1fr; gap: 56px; }
+  }
