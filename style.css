@@ -1739,8 +1739,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-02 .меню__строка:last-child { border-bottom: 1px solid; }
   #экран-02 .меню__номер { font-size: var(--кегль-h2); font-weight: 300; line-height: 1; letter-spacing: -0.02em; }
   #экран-02 .меню__суть > * { margin: 0; }
-  #экран-02 .меню__метка { font-size: var(--кегль-кикер); letter-spacing: var(--разрядка-кикера); text-transform: uppercase; margin-bottom: 8px; }
-  @media (max-width: 600px) { #экран-02 .меню__метка { font-size: var(--кегль-мелкий); } }
+  #экран-02 .меню__метка { font-size: var(--кегль-текст); font-weight: 600; margin-bottom: 8px; }
   #экран-02 .меню__имя { font-size: var(--кегль-лид); font-weight: 700; line-height: 1.3; margin-bottom: 6px; }
   #экран-02 .меню__пояснение { font-size: var(--кегль-текст); line-height: 1.55; }
   #экран-02 .меню__состав { list-style: none; padding: 0; margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px 18px; }
@@ -1782,7 +1781,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-03 .шаги-в-ряд li { padding-top: 22px; border-top: 1px solid; }
   #экран-03 .шаги-в-ряд li > * { margin: 0; }
   #экран-03 .цифра-шага { display: block; font-size: var(--кегль-h2); font-weight: 300; line-height: 1; margin-bottom: 18px; }
-  #экран-03 .срок-шага { font-size: var(--кегль-кикер); letter-spacing: var(--разрядка-кикера); text-transform: uppercase; margin-bottom: 8px; }
+  #экран-03 .срок-шага { font-size: var(--кегль-текст); font-weight: 600; margin-bottom: 8px; }
   #экран-03 .имя-шага { font-size: var(--кегль-лид); font-weight: 700; line-height: 1.3; margin-bottom: 8px; }
   #экран-03 .текст-шага { font-size: var(--кегль-текст); line-height: 1.55; }
   #экран-03 .полоса-кадра { position: relative; z-index: 2; margin: 0 0 44px; }
@@ -1819,7 +1818,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-04 .факт { padding: 18px 0; border-top: 1px solid; }
   #экран-04 .факт > * { margin: 0; }
   #экран-04 .факт__число { margin-bottom: 8px; font-size: var(--кегль-h2); font-weight: 300; line-height: 1; letter-spacing: -0.02em; }
-  #экран-04 .факт__подпись { font-size: var(--кегль-кикер); letter-spacing: var(--разрядка-кикера); text-transform: uppercase; line-height: 1.4; }
+  #экран-04 .факт__подпись { font-size: var(--кегль-текст); line-height: 1.4; }
   #экран-04 .портрет { position: relative; margin: 0; }
   #экран-04 .портрет .кадр { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; border-radius: var(--радиус-карточки); }
   #экран-04 .портрет__плашка { position: absolute; left: 20px; bottom: 20px; margin: 0; padding: 10px 16px;
