@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://lubovivanova62.github.io/lubo-zhit/sitemap.xml
